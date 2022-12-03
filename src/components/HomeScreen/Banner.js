@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import axiosReq from "../axios";
-import requests from "../request";
+import axiosReq from "../../axios";
+import requests from "../../request";
 import "./banner.css"
 
 const baseUrl = "https://image.tmdb.org/t/p/original/";
@@ -30,15 +30,15 @@ export default function Banner() {
         backgroundImage : `url(${baseUrl}${movie?.backdrop_path})`,
         backgroundPosition : "center center"
     }}>
-      <div className="bannerContents">
-        <h1 className="bannerTitle">{movie?.title || movie?.name || movie?.original_name}</h1>
-        <div className="bannerButtons">
-          <button className="bannerButton">Play</button>
-          <button className="bannerButton">My List</button>
+      <div className="banner__contents">
+        <h1 className="banner__title">{movie?.title || movie?.name || movie?.original_name}</h1>
+        <div className="banner__buttons">
+          <button className="banner__button">Play</button>
+          <button className="banner__button">My List</button>
         </div>
-        <h2 className="bannerDescription">{truncate(movie?.overview , 150)}</h2>
+        <h2 className="banner__bescription">{truncate(movie?.overview , 150)}</h2>
       </div>
-      <div className="bannerFadeBottom"></div>
+      <div className="banner--fadeBottom"></div>
     </header>
   );
 }

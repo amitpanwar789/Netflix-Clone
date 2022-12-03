@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axiosReq from "../axios";
+import axiosReq from "../../axios";
 import "./row.css";
 import Youtube from "react-youtube";
 import movieTrailer from "movie-trailer";
@@ -15,14 +15,8 @@ function Row({ title, fetchUrl, isLargeRow }) {
   useEffect(() => {
     async function fetchData() {
       const requestData = await axiosReq.get(fetchUrl);
-      // setMovies(requestData.data.results);
+      setMovies(requestData.data.results);
       //remove the result without posters
-      const temp = requestData.data.results.filter((movie)=>{
-        if(movie.backdrop_path) return true;
-        return false;
-      });
-      setMovies(temp);
-      console.log(movies[0]?.backdrop_path)
       return requestData;
     }
     fetchData();
@@ -55,18 +49,21 @@ function Row({ title, fetchUrl, isLargeRow }) {
   return (
     <div className="row">
       <h2>{title}</h2>
-      <div className="rowPosters">
-        {movies.map((movie) => (
-          <img
-            key={movie.id}
-            onClick={() => handleClick(movie)}
-            className={`poster ${isLargeRow && "rowPosterLarge"}`}
-            src={`${baseUrl}${
-              isLargeRow ? movie.poster_path : movie.backdrop_path
-            }`}
-            alt={movie?.name || movie?.title || movie?.original_title}
-          ></img>
-        ))}
+      <div className="row__posters">
+        {movies.map(
+          (movie) =>
+            (movie.poster_path || movie.backdrop_path) && (
+              <img
+                key={movie.id}
+                onClick={() => handleClick(movie)}
+                className={`row__poster ${isLargeRow && "row__posterLarge"}`}
+                src={`${baseUrl}${
+                  isLargeRow ? movie.poster_path : movie.backdrop_path
+                }`}
+                alt={movie?.name || movie?.title || movie?.original_title}
+              ></img>
+            )
+        )}
       </div>
       {trailerUrl && <Youtube videoId={trailerUrl} opts={opts}></Youtube>}
     </div>
