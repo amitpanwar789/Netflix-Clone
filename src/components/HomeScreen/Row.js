@@ -15,7 +15,11 @@ function Row({ title, fetchUrl, isLargeRow }) {
   useEffect(() => {
     async function fetchData() {
       const requestData = await axiosReq.get(fetchUrl);
-      setMovies(requestData.data.results);
+      const temp = requestData.data.results.filter((movie) => {
+        if (movie.backdrop_path) return true;
+        return false;
+      });
+      setMovies(temp);
       //remove the result without posters
       return requestData;
     }
@@ -50,20 +54,17 @@ function Row({ title, fetchUrl, isLargeRow }) {
     <div className="row">
       <h2>{title}</h2>
       <div className="row__posters">
-        {movies.map(
-          (movie) =>
-            (movie.poster_path || movie.backdrop_path) && (
-              <img
-                key={movie.id}
-                onClick={() => handleClick(movie)}
-                className={`row__poster ${isLargeRow && "row__posterLarge"}`}
-                src={`${baseUrl}${
-                  isLargeRow ? movie.poster_path : movie.backdrop_path
-                }`}
-                alt={movie?.name || movie?.title || movie?.original_title}
-              ></img>
-            )
-        )}
+        {movies.map((movie) => (
+          <img
+            key={movie.id}
+            onClick={() => handleClick(movie)}
+            className={`row__poster ${isLargeRow && "row__posterLarge"}`}
+            src={`${baseUrl}${
+              isLargeRow ? movie.poster_path : movie.backdrop_path
+            }`}
+            alt={movie?.name || movie?.title || movie?.original_title}
+          ></img>
+        ))}
       </div>
       {trailerUrl && <Youtube videoId={trailerUrl} opts={opts}></Youtube>}
     </div>
