@@ -2,7 +2,7 @@
 
 https://netflixclone-ad9a3.firebaseapp.com/
 
-This project is a clone of Netflix Home Page with trailer popout feature and all the small enhancement visual effect.
+This project is a frontend clone of Netflix Home Page, Signup Page and edit profile page with features like trailer popout and all the small visual effect.
 
 ![Screenshot from 2022-12-02 17-31-00](https://user-images.githubusercontent.com/64302444/205289814-a2271de8-2c18-46c7-97d8-0a46169ece6f.png)
 
@@ -14,6 +14,9 @@ This project is a clone of Netflix Home Page with trailer popout feature and all
 
 ![Screenshot from 2022-12-02 17-32-13](https://user-images.githubusercontent.com/64302444/205289903-1b7df7cc-f806-4ee9-930c-38b342e07a31.png)
 
+![Screenshot from 2022-12-04 13-57-52](https://user-images.githubusercontent.com/64302444/205482682-c7dbd124-772a-4769-a4b3-f39b675c4ad9.png)
+![Screenshot from 2022-12-04 13-57-49](https://user-images.githubusercontent.com/64302444/205482687-ccf232c7-93b6-458b-a96f-b4f230c9db9d.png)
+![Screenshot from 2022-12-04 13-57-41](https://user-images.githubusercontent.com/64302444/205482690-c239371f-3909-4c8f-ac31-8b4c208df7e0.png)
 
 
 ## Run it locally
