@@ -23,7 +23,7 @@
     display: none; /*for chrome*/
 }
 
-.poster:hover{
+.row__poster:hover{
     transform: scale(1.08);
 }
 
