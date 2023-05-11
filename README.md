@@ -1,6 +1,6 @@
 # Netflix Clone
 
-https://netflixclone-ad9a3.firebaseapp.com/
+[https://netflixclone-ad9a3.firebaseapp.com/](https://neflixclonesite.netlify.app)
 
 This project is a frontend clone of Netflix Home Page, Signup Page and edit profile page with features like trailer popout and all the small visual effect.
 
