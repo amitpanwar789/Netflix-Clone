@@ -20,8 +20,8 @@ This project is a frontend clone of Netflix Home Page, Signup Page and edit prof
 
 
 ## Run it locally
-1. git clone https://github.com/amitpanwar789/Sorting-Visualizer.git
-2. cd yelpcamp
+1. git clone https://github.com/amitpanwar789/Netflix-Clone
+2. cd Netflic-Clone
 3. npm install
 
 ## Available Scripts
