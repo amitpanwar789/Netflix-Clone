@@ -3,12 +3,12 @@ import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBbB0aPRTNgwYqtDYWZEDGxLL8P0kVYIS0",
-  authDomain: "netflixclone-ad9a3.firebaseapp.com",
-  projectId: "netflixclone-ad9a3",
-  storageBucket: "netflixclone-ad9a3.appspot.com",
-  messagingSenderId: "199288085595",
-  appId: "1:199288085595:web:77813a18af482e8377f37e",
+  apiKey: "AIzaSyBJ6v2DD9LNWQq2arAsZ9LaHyBC1B7hv6w",
+  authDomain: "netflix-clone-d3f0d.firebaseapp.com",
+  projectId: "netflix-clone-d3f0d",
+  storageBucket: "netflix-clone-d3f0d.appspot.com",
+  messagingSenderId: "525135353119",
+  appId: "1:525135353119:web:8865af74e7059714394c2a"
 };
 
 const firebaseApp = initializeApp(firebaseConfig);
